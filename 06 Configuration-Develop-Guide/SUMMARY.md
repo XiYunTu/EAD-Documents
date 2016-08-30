@@ -55,3 +55,6 @@
     * [高级属性配置](Case-PMO/Advanced/Attributes.md)
     * [通用视图动作驱动](Case-PMO/Advanced/Common Actions.md)
     * [自定义视图动作驱动](Case-PMO/Advanced/Custom Actions.md)
+* [综合案例2：固废系统构建](Case-HWMS/README.md)  
+  * [分析设计](Case-HWMS/Introduction of Functions.md)  
+  * [系统构建](Case-HWMS/Construction.md)
