@@ -1,0 +1,1115 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>综合案例2：固废系统构建 | EAD 配置开发手册</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../Case-HWMS/Introduction of Functions.html" />
+    
+    
+    <link rel="prev" href="../Case-PMO/Advanced/Custom Actions.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="11"
+        data-chapter-title="综合案例2：固废系统构建"
+        data-filepath="Case-HWMS/README.md"
+        data-basepath=".."
+        data-revision="Wed Aug 31 2016 10:13:06 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="Specification/index.html">
+            
+                
+                    <a href="../Specification/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        规范
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="Specification/Naming.html">
+            
+                
+                    <a href="../Specification/Naming.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        配置开发命名
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Specification/Extension.html">
+            
+                
+                    <a href="../Specification/Extension.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        扩展开发
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="Model/index.html">
+            
+                
+                    <a href="../Model/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        模型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="Model/Create Model.html">
+            
+                
+                    <a href="../Model/Create Model.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        创建模型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Model/Create Model Attributes.html">
+            
+                
+                    <a href="../Model/Create Model Attributes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        创建模型属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Model/Setting Data Source.html">
+            
+                
+                    <a href="../Model/Setting Data Source.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        设置数据源
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Model/Create Entity.html">
+            
+                
+                    <a href="../Model/Create Entity.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        创建实体
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Collection/index.html">
+            
+                
+                    <a href="../Collection/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        数据集
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="Collection/Create Collection.html">
+            
+                
+                    <a href="../Collection/Create Collection.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        创建数据集
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="View/index.html">
+            
+                
+                    <a href="../View/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        视图
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="View/Create View.html">
+            
+                
+                    <a href="../View/Create View.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        创建视图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="View/Create View Attributes.html">
+            
+                
+                    <a href="../View/Create View Attributes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        创建视图属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="View/Create View Actions.html">
+            
+                
+                    <a href="../View/Create View Actions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        创建视图动作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="View/Create View Filters.html">
+            
+                
+                    <a href="../View/Create View Filters.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        创建视图过滤器
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="Application/index.html">
+            
+                
+                    <a href="../Application/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        应用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="Application/Create Application.html">
+            
+                
+                    <a href="../Application/Create Application.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        创建应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="Application/Create Application Resource.html">
+            
+                
+                    <a href="../Application/Create Application Resource.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        创建应用资源
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="Application/Create Application Role.html">
+            
+                
+                    <a href="../Application/Create Application Role.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        创建应用角色
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="Workflow/index.html">
+            
+                
+                    <a href="../Workflow/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        工作流
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="Workflow/Create Workflow Model.html">
+            
+                
+                    <a href="../Workflow/Create Workflow Model.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        创建工作流模型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="Workflow/Create Workflow Step.html">
+            
+                
+                    <a href="../Workflow/Create Workflow Step.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        创建工作流步骤
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="Workflow/Binding Workflow.html">
+            
+                
+                    <a href="../Workflow/Binding Workflow.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        绑定工作流
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="Workflow/Create Report View &amp; Report Actions.html">
+            
+                
+                    <a href="../Workflow/Create Report View &amp; Report Actions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        创建上报视图及视图动作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="Workflow/Create Check View &amp; Check Actions.html">
+            
+                
+                    <a href="../Workflow/Create Check View &amp; Check Actions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        创建审批视图及视图动作
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="WHWorkflow/index.html">
+            
+                
+                    <a href="../WHWorkflow/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        WANHUA工作流
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="WHWorkflow/Config Prepare.html">
+            
+                
+                    <a href="../WHWorkflow/Config Prepare.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        配置准备工作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="WHWorkflow/Start Page Config.html">
+            
+                
+                    <a href="../WHWorkflow/Start Page Config.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        发起页面配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="WHWorkflow/Approve Page Config.html">
+            
+                
+                    <a href="../WHWorkflow/Approve Page Config.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        审批页面配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="WHWorkflow/Resource Config.html">
+            
+                
+                    <a href="../WHWorkflow/Resource Config.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        资源配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="WHWorkflow/Edit Fields Config.html">
+            
+                
+                    <a href="../WHWorkflow/Edit Fields Config.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        可编辑项配置
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="Base Settings/index.html">
+            
+                
+                    <a href="../Base Settings/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        基本配置
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="Base Settings/View Settings.html">
+            
+                
+                    <a href="../Base Settings/View Settings.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        视图配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Base Settings/View Action Settings.html">
+            
+                
+                    <a href="../Base Settings/View Action Settings.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        视图动作配置
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="Advanced Settings/index.html">
+            
+                
+                    <a href="../Advanced Settings/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        高级配置
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="Advanced Settings/Setting System Variable.html">
+            
+                
+                    <a href="../Advanced Settings/Setting System Variable.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        配置系统变量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Advanced Settings/Setting Model Attribute&#39;s Wordbook.html">
+            
+                
+                    <a href="../Advanced Settings/Setting Model Attribute&#39;s Wordbook.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        配置模型属性字典
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="Advanced Settings/Register Driver.html">
+            
+                
+                    <a href="../Advanced Settings/Register Driver.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        注册自定义驱动
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="Advanced Settings/Form.html">
+            
+                
+                    <a href="../Advanced Settings/Form.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        表单联动
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="Advanced Settings/View Mode.html">
+            
+                
+                    <a href="../Advanced Settings/View Mode.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.</b>
+                        
+                        视图模式
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="Case-PMO/index.html">
+            
+                
+                    <a href="../Case-PMO/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        综合案例：IT 项目工单管理工具
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="Case-PMO/Design.html">
+            
+                
+                    <a href="../Case-PMO/Design.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        分析设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="Case-PMO/Ready.html">
+            
+                
+                    <a href="../Case-PMO/Ready.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        配置开发准备
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="Case-PMO/Basic/index.html">
+            
+                
+                    <a href="../Case-PMO/Basic/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.</b>
+                        
+                        基本模型视图设计开发
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.3.1" data-path="Case-PMO/Basic/Model.html">
+            
+                
+                    <a href="../Case-PMO/Basic/Model.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.1.</b>
+                        
+                        创建模型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3.2" data-path="Case-PMO/Basic/Entity.html">
+            
+                
+                    <a href="../Case-PMO/Basic/Entity.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.2.</b>
+                        
+                        创建实体
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3.3" data-path="Case-PMO/Basic/Collection.html">
+            
+                
+                    <a href="../Case-PMO/Basic/Collection.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.3.</b>
+                        
+                        创建数据集
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3.4" data-path="Case-PMO/Basic/View.html">
+            
+                
+                    <a href="../Case-PMO/Basic/View.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.4.</b>
+                        
+                        创建视图
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="Case-PMO/Res.html">
+            
+                
+                    <a href="../Case-PMO/Res.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.4.</b>
+                        
+                        资源及授权管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="Case-PMO/Advanced/index.html">
+            
+                
+                    <a href="../Case-PMO/Advanced/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.5.</b>
+                        
+                        高级进阶
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.5.1" data-path="Case-PMO/Advanced/Quick.html">
+            
+                
+                    <a href="../Case-PMO/Advanced/Quick.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.5.1.</b>
+                        
+                        快速构建模型视图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5.2" data-path="Case-PMO/Advanced/Attributes.html">
+            
+                
+                    <a href="../Case-PMO/Advanced/Attributes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.5.2.</b>
+                        
+                        高级属性配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5.3" data-path="Case-PMO/Advanced/Common Actions.html">
+            
+                
+                    <a href="../Case-PMO/Advanced/Common Actions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.5.3.</b>
+                        
+                        通用视图动作驱动
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5.4" data-path="Case-PMO/Advanced/Custom Actions.html">
+            
+                
+                    <a href="../Case-PMO/Advanced/Custom Actions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.5.4.</b>
+                        
+                        自定义视图动作驱动
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="11" data-path="Case-HWMS/index.html">
+            
+                
+                    <a href="../Case-HWMS/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        综合案例2：固废系统构建
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="Case-HWMS/Introduction of Functions.html">
+            
+                
+                    <a href="../Case-HWMS/Introduction of Functions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        分析设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="Case-HWMS/Construction.html">
+            
+                
+                    <a href="../Case-HWMS/Construction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                        系统构建
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="FAQ/index.html">
+            
+                
+                    <a href="../FAQ/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        配置常见问题与解答
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >EAD 配置开发手册</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>&#x4EC5;&#x622A;&#x53D6;&#x4E86;&#x56FA;&#x5E9F;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;(HWMS)&#x4E2D;&#x6709;&#x4EE3;&#x8868;&#x6027;&#x7684;&#x90E8;&#x5206;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x793A;&#x4F8B;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../Case-PMO/Advanced/Custom Actions.html" class="navigation navigation-prev " aria-label="Previous page: 自定义视图动作驱动"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../Case-HWMS/Introduction of Functions.html" class="navigation navigation-next " aria-label="Next page: 分析设计"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
