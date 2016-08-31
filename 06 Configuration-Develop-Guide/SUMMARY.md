@@ -58,3 +58,4 @@
 * [综合案例2：固废系统构建](Case-HWMS/README.md)  
   * [分析设计](Case-HWMS/Introduction of Functions.md)  
   * [系统构建](Case-HWMS/Construction.md)
+* [配置常见问题与解答](FAQ/README.md)
