@@ -1,0 +1,578 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Jre &amp; Tomcat安装 | EAD 安装部署手册</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="../Suse Install/install_mongodb.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="7.3"
+        data-chapter-title="Jre &amp; Tomcat安装"
+        data-filepath="Suse Install/install_jre&amp;tomcat.md"
+        data-basepath=".."
+        data-revision="Fri Sep 02 2016 16:32:09 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="Environment/index.html">
+            
+                
+                    <a href="../Environment/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        服务器运行环境准备
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="Environment/Windows Server.html">
+            
+                
+                    <a href="../Environment/Windows Server.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Winows Server
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="Environment/Install Mysql.html">
+            
+                
+                    <a href="../Environment/Install Mysql.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        安装 Mysql
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="Environment/Install Mongodb.html">
+            
+                
+                    <a href="../Environment/Install Mongodb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        安装 Mongodb
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="Environment/Install Tomcat.html">
+            
+                
+                    <a href="../Environment/Install Tomcat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.3.</b>
+                        
+                        安装 Tomcat
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="Config Data Init/Config Data Init.html">
+            
+                
+                    <a href="../Config Data Init/Config Data Init.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        配置数据初始化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Deployment/index.html">
+            
+                
+                    <a href="../Deployment/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        平台部署
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="Deployment/Windows Deployment.html">
+            
+                
+                    <a href="../Deployment/Windows Deployment.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Windows下部署
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Deployment/Linux Deployment.html">
+            
+                
+                    <a href="../Deployment/Linux Deployment.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Linux下部署
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="Backup/index.html">
+            
+                
+                    <a href="../Backup/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        备份
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="Backup/Mysql.html">
+            
+                
+                    <a href="../Backup/Mysql.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Mysql 数据备份
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="Backup/Mongodb.html">
+            
+                
+                    <a href="../Backup/Mongodb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Mongodb 数据备份
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Backup/EAD.html">
+            
+                
+                    <a href="../Backup/EAD.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        EAD 安装包备份
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="Install Extend/index.html">
+            
+                
+                    <a href="../Install Extend/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        安装扩展配置
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="Install Extend/Mysql.html">
+            
+                
+                    <a href="../Install Extend/Mysql.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Mysql 优化配置
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="Master&amp;Slave/index.html">
+            
+                
+                    <a href="../Master&amp;Slave/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        集群部署
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="Master&amp;Slave/Mysql.html">
+            
+                
+                    <a href="../Master&amp;Slave/Mysql.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Mysql 主备配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="Master&amp;Slave/Mongodb.html">
+            
+                
+                    <a href="../Master&amp;Slave/Mongodb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Mongodb 主备配置
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="Suse Install/index.html">
+            
+                
+                    <a href="../Suse Install/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        EAD Suse环境部署
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="Suse Install/install_package.html">
+            
+                
+                    <a href="../Suse Install/install_package.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        安装包路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Suse Install/install_mongodb.html">
+            
+                
+                    <a href="../Suse Install/install_mongodb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Mongodb安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.3" data-path="Suse Install/install_jre&amp;tomcat.html">
+            
+                
+                    <a href="../Suse Install/install_jre&amp;tomcat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        Jre &amp; Tomcat安装
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >EAD 安装部署手册</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="jretomcat&#x5B89;&#x88C5;">JRE&amp;Tomcat&#x5B89;&#x88C5;</h1>
+<h2 id="1-&#x521B;&#x5EFA;ead&#x4E1A;&#x52A1;&#x7528;&#x6237;">1 &#x521B;&#x5EFA;EAD&#x4E1A;&#x52A1;&#x7528;&#x6237;</h2>
+<ol>
+<li><p>&#x901A;&#x8FC7;root&#x7528;&#x6237;&#x767B;&#x5F55;&#x4E24;&#x53F0;&#xFF0C;&#x6267;&#x884C;</p>
+<p> /# useradd -d /data/ead -m ead</p>
+</li>
+<li><p>&#x4FEE;&#x6539;&#x5BC6;&#x7801;</p>
+<p> passwd ead</p>
+</li>
+</ol>
+<h2 id="2-&#x4E0A;&#x4F20;jre&#x53CA;tomcat&#x5B89;&#x88C5;&#x5305;">2 &#x4E0A;&#x4F20;jre&#x53CA;tomcat&#x5B89;&#x88C5;&#x5305;</h2>
+<ol>
+<li>&#x901A;&#x8FC7;ead&#x7528;&#x6237;&#xFF0C;&#x5C06;jre&#x5B89;&#x88C5;&#x5305;jre-7u80-linux-x64.tar.gz&#x53CA;tomcat&#x5B89;&#x88C5;&#x5305;&#x4E0A;&#x4F20;ead&#x4E24;&#x53F0;&#x670D;&#x52A1;&#x5668;home&#x76EE;&#x5F55;/data/ead</li>
+</ol>
+<h2 id="3-&#x5B89;&#x88C5;jre">3 &#x5B89;&#x88C5;jre</h2>
+<ol>
+<li><p>&#x901A;&#x8FC7;ead&#x7528;&#x6237;&#xFF0C;&#x89E3;&#x538B;jre&#x5B89;&#x88C5;&#x5305;</p>
+<blockquote>
+<p>tar -xzvf apache-tomcat-7.0.69.tar.gz</p>
+</blockquote>
+</li>
+</ol>
+<p>2&#x3001;    &#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;
+    vi .bashrc</p>
+<p>&#x8F93;&#x5165;</p>
+<pre><code>export JAVA_HOME=/data/ead/jre1.7.0_80
+export JRE_HOME=/data/ead/jre1.7.0_80
+</code></pre><p>&#x4FDD;&#x5B58;&#x9000;&#x51FA;</p>
+<pre><code>source .bashrc
+</code></pre><h2 id="4----&#x5B89;&#x88C5;tomcat">4    &#x5B89;&#x88C5;tomcat</h2>
+<ol>
+<li><p>&#x901A;&#x8FC7;ead&#x7528;&#x6237;&#xFF0C;&#x89E3;&#x538B;jre&#x5B89;&#x88C5;&#x5305;</p>
+<blockquote>
+<p>tar -xzvf apache-tomcat-7.0.69.tar.gz</p>
+</blockquote>
+</li>
+<li><p>&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<p> vi .bashrc</p>
+</li>
+</ol>
+<p>&#x8F93;&#x5165;</p>
+<pre><code>export PATH=$JAVA_HOME/bin:$PATH
+export CATALINA_HOME=/data/ead/apache-tomcat-7.0.69
+</code></pre><p>&#x4FDD;&#x5B58;&#x9000;&#x51FA;</p>
+<pre><code>source .bashrc
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../Suse Install/install_mongodb.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Mongodb安装"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

@@ -53,7 +53,7 @@
         data-chapter-title="安装 Mongodb"
         data-filepath="Environment/Install Mongodb.md"
         data-basepath=".."
-        data-revision="Mon Mar 28 2016 07:33:00 GMT+0800 (CST)"
+        data-revision="Fri Sep 02 2016 16:32:09 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -200,16 +200,31 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1" data-path="Deployment/Tomcat Deployment.html">
+        <li class="chapter " data-level="3.1" data-path="Deployment/Windows Deployment.html">
             
                 
-                    <a href="../Deployment/Tomcat Deployment.html">
+                    <a href="../Deployment/Windows Deployment.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>3.1.</b>
                         
-                        Tomcat
+                        Windows下部署
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Deployment/Linux Deployment.html">
+            
+                
+                    <a href="../Deployment/Linux Deployment.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Linux下部署
                     </a>
             
             
@@ -373,6 +388,72 @@
             
         </li>
     
+        <li class="chapter " data-level="7" data-path="Suse Install/index.html">
+            
+                
+                    <a href="../Suse Install/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        EAD Suse环境部署
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="Suse Install/install_package.html">
+            
+                
+                    <a href="../Suse Install/install_package.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        安装包路径
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Suse Install/install_mongodb.html">
+            
+                
+                    <a href="../Suse Install/install_mongodb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Mongodb安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Suse Install/install_jre&amp;tomcat.html">
+            
+                
+                    <a href="../Suse Install/install_jre&amp;tomcat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        Jre &amp; Tomcat安装
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
 
             
@@ -424,7 +505,7 @@
 <p>&#x8FD9;&#x91CC;&#x662F;&#x628A;mongodb&#x8BBE;&#x7F6E;&#x4E3A;windows&#x670D;&#x52A1;&#xFF0C;&#x5E76;&#x4E14;&#x5F00;&#x542F;&#x8BA4;&#x8BC1;&#x3002;</p>
 </blockquote>
 <p>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x542F;&#x52A8;&#x5B89;&#x88C5;&#x597D;&#x7684; Mongodb</p>
-<pre><code>Script&#xFF1A;&quot;bin\mongod.exe&quot; --config=D:\gbros\mongodb\mongod.cfg
+<pre><code>Script&#xFF1A;&quot;D:\gbros\mongodb\bin\mongod.exe&quot; --config=D:\gbros\mongodb\mongod.cfg
 </code></pre><p>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x901A;&#x8FC7;&#x64CD;&#x4F5C; Mongodb &#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x589E;&#x52A0;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;</p>
 <pre><code>use admin
 db.createUser(
@@ -442,7 +523,7 @@ db.createUser(
 )
 </code></pre><p>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x628A; Mongodb &#x8BBE;&#x7F6E;&#x4E3A; Windows</p>
 <p>&#x5728; Windows &#x547D;&#x4EE4;&#x7A97;&#x53E3;&#x4E2D;&#x8FD0;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x628A; mongodb &#x52A0;&#x5165; Windows &#x670D;&#x52A1;&#xFF1A;</p>
-<pre><code>sc.exe create MongoDB binPath= &quot;bin\mongod.exe --auth --service --config=\&quot;D:\gbros\mongodb\mongod.cfg\&quot;&quot; DisplayName= &quot;MongoDB&quot; start= &quot;auto&quot;
+<pre><code>sc.exe create MongoDB binPath= &quot;D:\gbros\mongodb\bin\mongod.exe --auth --service --config=&quot;D:\gbros\mongodb\mongod.cfg&quot; DisplayName= &quot;MongoDB&quot; start= &quot;auto&quot;
 </code></pre><blockquote>
 <p>&#x6CE8;&#x610F;&#xFF1A;&#x4EE5;&#x4E0A;&#x547D;&#x4EE4;&#x4E2D;&#x7684; binPath &#x548C; config &#x8DEF;&#x5F84;&#x8BBE;&#x7F6E;&#x4E3A;&#x6B63;&#x786E;&#x8DEF;&#x5F84;&#xFF1B;
 DisplayName &#x4E3A; Windows &#x4E2D;mongodb&#x670D;&#x52A1;&#x540D;&#x79F0;&#xFF0C;start &#x4E3A; mongodb &#x542F;&#x52A8;&#x7C7B;&#x578B;&#xFF1B;</p>

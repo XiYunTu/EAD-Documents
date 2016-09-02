@@ -12,8 +12,8 @@ EAD 平台结合 BMP 定义的视图驱动，主要功能点是组合 BPM 审批
 **驱动 URI：** Whbpm/view
 
 **涉及 BPM 接口：** 
-- 基本信息查询接口（AJAX_TrdPty_RetrieveBaseInfo）;
-- 审批界面按钮显示接口（AJAX_TrdPty_RetrievebtnStatus）;
+- 基本信息查询接口（RetrieveBaseInfo）;
+- 审批界面按钮显示接口（RetrievebtnStatus）;
 
 **驱动功能：**
 - 根据 EAD 视图配置获取业务数据对象;
@@ -31,7 +31,7 @@ EAD 平台结合 BMP 定义的视图驱动，主要功能点是组合 BPM 审批
 
 **驱动 URI：** Whbpm/start
 
-**涉及 BPM 接口：** 流程发起接口（AJAX_TrdPty_StartProcess）
+**涉及 BPM 接口：** 流程发起接口（StartProcess）
 
 **驱动功能：**
 - 组织 BPM 流程发起接口参数;
@@ -48,7 +48,7 @@ EAD 平台结合 BMP 定义的视图驱动，主要功能点是组合 BPM 审批
 
 **驱动 URI：** Whbpm/submit
 
-**涉及 BPM 接口：** 待办提交接口（AJAX_Mobile_CompleteTask）
+**涉及 BPM 接口：** 待办提交接口（CompleteTask）
 
 **驱动功能：**
 - 接收并解析用户提交的待办提交数据;
@@ -63,7 +63,7 @@ EAD 平台结合 BMP 定义的视图驱动，主要功能点是组合 BPM 审批
 
 **驱动 URI：** Whbpm/back
 
-**涉及 BPM 接口：** 待办驳回接口（AJAX_TrdPty_RejectTask）
+**涉及 BPM 接口：** 待办驳回接口（RejectTask）
 
 **驱动功能：**
 - 接收并解析用户提交的待办驳回数据;
@@ -78,7 +78,7 @@ EAD 平台结合 BMP 定义的视图驱动，主要功能点是组合 BPM 审批
 
 **驱动 URI：** Whbpm/turnToDo
 
-**涉及 BPM 接口：** 待办转办、加签接口（AJAX_TrdPty_ReassignTask）
+**涉及 BPM 接口：** 待办转办、加签接口（ReassignTask）
 
 **驱动功能：**
 - 接收并解析用户提交的待办转办、加签数据;
@@ -93,7 +93,7 @@ EAD 平台结合 BMP 定义的视图驱动，主要功能点是组合 BPM 审批
 
 **驱动 URI：** Whbpm/logout
 
-**涉及 BPM 接口：** 注销接口（?）
+**涉及 BPM 接口：** 注销接口（CancelProcess）
 
 **驱动功能：**
 - 接收并解析用户提交的数据;
@@ -110,7 +110,7 @@ EAD 平台结合 BMP 定义的视图驱动，主要功能点是组合 BPM 审批
 
 **驱动 URI：** Whbpm/next
 
-**涉及 BPM 接口：** 下一环节以及审批人接口（AJAX_TrdPty_RetrieveNextActivity）
+**涉及 BPM 接口：** 下一环节以及审批人接口（RetrieveNextActivity）
 
 **驱动功能：**
 - 组织下一环节以及审批人参数;
@@ -123,7 +123,7 @@ EAD 平台结合 BMP 定义的视图驱动，主要功能点是组合 BPM 审批
 
 **驱动 URI：** Whbpm/backPaths
 
-**涉及 BPM 接口：** 驳回路径接口（AJAX_TrdPty_RetrieveRejectPaths）
+**涉及 BPM 接口：** 驳回路径接口（RetrieveRejectPaths）
 
 **驱动功能：**
 - 组织驳回路径参数;
@@ -136,7 +136,7 @@ EAD 平台结合 BMP 定义的视图驱动，主要功能点是组合 BPM 审批
 
 **驱动 URI：** Whbpm/info
 
-**涉及 BPM 接口：** 基本信息查询接口（AJAX_TrdPty_RetrieveBaseInfo）
+**涉及 BPM 接口：** 基本信息查询接口（RetrieveBaseInfo）
 
 **驱动功能：**
 - 组织基本信息查询参数;
@@ -149,7 +149,7 @@ EAD 平台结合 BMP 定义的视图驱动，主要功能点是组合 BPM 审批
 
 **驱动 URI：** Whbpm/logs
 
-**涉及 BPM 接口：** 审批历史接口（AJAX_TrdPty_RetrieveTaskDones）
+**涉及 BPM 接口：** 审批历史接口（RetrieveTaskDones）
 
 **驱动功能：**
 - 组织审批历史参数;
