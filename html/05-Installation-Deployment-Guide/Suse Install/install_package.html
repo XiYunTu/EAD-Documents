@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>安装 Mongodb | EAD 安装部署手册</title>
+        <title>安装包路径 | EAD 安装部署手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../Environment/Install Tomcat.html" />
+    <link rel="next" href="../Suse Install/install_mongodb.html" />
     
     
-    <link rel="prev" href="../Environment/Install Mysql.html" />
+    <link rel="prev" href="../Suse Install/index.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="1.1.2"
-        data-chapter-title="安装 Mongodb"
-        data-filepath="Environment/Install Mongodb.md"
+        data-level="7.1"
+        data-chapter-title="安装包路径"
+        data-filepath="Suse Install/install_package.md"
         data-basepath=".."
         data-revision="Fri Sep 02 2016 16:32:09 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -129,7 +129,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.2" data-path="Environment/Install Mongodb.html">
+        <li class="chapter " data-level="1.1.2" data-path="Environment/Install Mongodb.html">
             
                 
                     <a href="../Environment/Install Mongodb.html">
@@ -404,7 +404,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="7.1" data-path="Suse Install/install_package.html">
+        <li class="chapter active" data-level="7.1" data-path="Suse Install/install_package.html">
             
                 
                     <a href="../Suse Install/install_package.html">
@@ -487,58 +487,16 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h3 id="&#x5B89;&#x88C5;-mongodb">&#x5B89;&#x88C5; Mongodb</h3>
-<h4 id="1-&#x4E0B;&#x8F7D;-mongodb">1. &#x4E0B;&#x8F7D; Mongodb</h4>
-<p>&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="https://www.mongodb.org/" target="_blank">https://www.mongodb.org/</a></p>
-<h4 id="2-windows-&#x4E0B;&#x5B89;&#x88C5;-mongodb">2. Windows &#x4E0B;&#x5B89;&#x88C5; Mongodb</h4>
-<p>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8FD0;&#x884C; Mongodb &#x5B89;&#x88C5;&#x5305;&#xFF1B;</p>
-<p><img src="../images/mongodb/1.png" alt="PNG">
-<img src="../images/mongodb/2.png" alt="PNG"></p>
-<p>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x5B89;&#x88C5;&#x4F4D;&#x7F6E;&#xFF1B;</p>
-<p><img src="../images/mongodb/3.png" alt="PNG">
-<img src="../images/mongodb/4.png" alt="PNG"></p>
-<p>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x5B8C;&#x6210;&#x5B89;&#x88C5;&#xFF1B;</p>
-<p><img src="../images/mongodb/5.png" alt="PNG">
-<img src="../images/mongodb/7.png" alt="PNG"></p>
-<h4 id="3-&#x914D;&#x7F6E;-mongodb-&#x4E3A;-windows-&#x670D;&#x52A1;">3. &#x914D;&#x7F6E; Mongodb &#x4E3A; Windows &#x670D;&#x52A1;</h4>
-<blockquote>
-<p>&#x8FD9;&#x91CC;&#x662F;&#x628A;mongodb&#x8BBE;&#x7F6E;&#x4E3A;windows&#x670D;&#x52A1;&#xFF0C;&#x5E76;&#x4E14;&#x5F00;&#x542F;&#x8BA4;&#x8BC1;&#x3002;</p>
-</blockquote>
-<p>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x542F;&#x52A8;&#x5B89;&#x88C5;&#x597D;&#x7684; Mongodb</p>
-<pre><code>Script&#xFF1A;&quot;D:\gbros\mongodb\bin\mongod.exe&quot; --config=D:\gbros\mongodb\mongod.cfg
-</code></pre><p>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x901A;&#x8FC7;&#x64CD;&#x4F5C; Mongodb &#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x589E;&#x52A0;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;</p>
-<pre><code>use admin
-db.createUser(
-  {
-    user: &quot;root&quot;,
-    pwd: &quot;test@2016&quot;,
-    roles:
-    [
-      {
-        role: &quot;userAdminAnyDatabase&quot;,
-        db: &quot;admin&quot;
-      }
-    ]
-  }
-)
-</code></pre><p>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x628A; Mongodb &#x8BBE;&#x7F6E;&#x4E3A; Windows</p>
-<p>&#x5728; Windows &#x547D;&#x4EE4;&#x7A97;&#x53E3;&#x4E2D;&#x8FD0;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x628A; mongodb &#x52A0;&#x5165; Windows &#x670D;&#x52A1;&#xFF1A;</p>
-<pre><code>sc.exe create MongoDB binPath= &quot;D:\gbros\mongodb\bin\mongod.exe --auth --service --config=&quot;D:\gbros\mongodb\mongod.cfg&quot; DisplayName= &quot;MongoDB&quot; start= &quot;auto&quot;
-</code></pre><blockquote>
-<p>&#x6CE8;&#x610F;&#xFF1A;&#x4EE5;&#x4E0A;&#x547D;&#x4EE4;&#x4E2D;&#x7684; binPath &#x548C; config &#x8DEF;&#x5F84;&#x8BBE;&#x7F6E;&#x4E3A;&#x6B63;&#x786E;&#x8DEF;&#x5F84;&#xFF1B;
-DisplayName &#x4E3A; Windows &#x4E2D;mongodb&#x670D;&#x52A1;&#x540D;&#x79F0;&#xFF0C;start &#x4E3A; mongodb &#x542F;&#x52A8;&#x7C7B;&#x578B;&#xFF1B;</p>
-</blockquote>
-<h4 id="4-&#x542F;&#x52A8;-mongodb&#x670D;&#x52A1;&#xFF0C;&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5E93;&#x5E76;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x5458;">4. &#x542F;&#x52A8; Mongodb&#x670D;&#x52A1;&#xFF0C;&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5E93;&#x5E76;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x5458;</h4>
-<p>&#x6253;&#x5F00; Windows &#x670D;&#x52A1;&#x754C;&#x9762;&#xFF0C;&#x542F;&#x52A8; mongodb &#x670D;&#x52A1;&#xFF1B;</p>
-<p><img src="../images/mongodb/8.png" alt="PNG"></p>
-<p>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5E76;&#x589E;&#x52A0;&#x8BE5;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x5458;</p>
-<p>&#x9996;&#x5148;&#x8FDB;&#x884C;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#x8BA4;&#x8BC1;&#xFF1A;</p>
-<pre><code>use admin
-db.auth(&apos;root&apos;,&apos;test@2016&apos;)
-</code></pre><p>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x53CA;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x5458;</p>
-<pre><code>use ead
-db.createUser({&quot;user&quot;: &quot;admin&quot;,&quot;pwd&quot;: &quot;test@2016&quot;,&quot;roles&quot;: [&quot;readWrite&quot;,&quot;dbAdmin&quot;]})
-</code></pre>
+                        <h1 id="1&#x5B89;&#x88C5;&#x5305;&#x8DEF;&#x5F84;">1.&#x5B89;&#x88C5;&#x5305;&#x8DEF;&#x5F84;</h1>
+<ul>
+<li>Mongo DB&#x5B89;&#x88C5;&#x5305;
+<a href="https://svnpd.ap.whchem.com/svn/ECS/EAD/trunk/InstallPackage/mongodb/mongodb-linux-x86_64-rhel62-3.2.7.tgz" target="_blank">https://svnpd.ap.whchem.com/svn/ECS/EAD/trunk/InstallPackage/mongodb/mongodb-linux-x86_64-rhel62-3.2.7.tgz</a></li>
+<li>JRE7&#x5B89;&#x88C5;
+<a href="https://svnpd.ap.whchem.com/svn/ECS/EAD/trunk/InstallPackage/jre/jre-7u80-linux-x64.tar.gz" target="_blank">https://svnpd.ap.whchem.com/svn/ECS/EAD/trunk/InstallPackage/jre/jre-7u80-linux-x64.tar.gz</a></li>
+<li>Tomcat7&#x5B89;&#x88C5;&#x5305;
+<a href="https://svnpd.ap.whchem.com/svn/ECS/EAD/trunk/InstallPackage/tomcat/apache-tomcat-7.0.69.tar.gz" target="_blank">https://svnpd.ap.whchem.com/svn/ECS/EAD/trunk/InstallPackage/tomcat/apache-tomcat-7.0.69.tar.gz</a></li>
+</ul>
+
                     
                     </section>
                 
@@ -548,10 +506,10 @@ db.createUser({&quot;user&quot;: &quot;admin&quot;,&quot;pwd&quot;: &quot;test@2
         </div>
 
         
-        <a href="../Environment/Install Mysql.html" class="navigation navigation-prev " aria-label="Previous page: 安装 Mysql"><i class="fa fa-angle-left"></i></a>
+        <a href="../Suse Install/index.html" class="navigation navigation-prev " aria-label="Previous page: EAD Suse环境部署"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../Environment/Install Tomcat.html" class="navigation navigation-next " aria-label="Next page: 安装 Tomcat"><i class="fa fa-angle-right"></i></a>
+        <a href="../Suse Install/install_mongodb.html" class="navigation navigation-next " aria-label="Next page: Mongodb安装"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
