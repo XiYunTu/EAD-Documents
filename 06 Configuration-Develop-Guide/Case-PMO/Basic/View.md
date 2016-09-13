@@ -44,6 +44,8 @@
         + 显示模式：```title``` 
     + create_time
         + 隐藏：```列表```
+    + creator
+        + 权限：```禁止``` 
 - 客户信息字典
     + customer_name
         + 权限：```禁止``` 
