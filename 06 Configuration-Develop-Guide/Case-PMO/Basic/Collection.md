@@ -11,14 +11,14 @@
 - 客户信息查询
     + 名称：```客户信息查询```
     + 模型：```pmo_customer```
-    + 原生查询：```SELECT * FROM pmo_customer```
+    + 原生查询：```SELECT * FROM `pmo_customer` ```
     + 查询类型：```默认```
     + 数据源：```IT PMO```
     + 集合分类：```用户```
 - 项目信息查询
     + 名称：```项目信息查询```
     + 模型：```pmo_project```
-    + 原生查询：```SELECT * FROM pmo_project```
+    + 原生查询：```SELECT * FROM `pmo_project` ```
     + 查询类型：```默认```
     + 数据源：```IT PMO```
     + 集合分类：```用户```
