@@ -73,13 +73,13 @@
 Session过滤器通过比对Session中的相关信息，将过滤后的信息展示给用户。Session过滤器一般为隐藏属性。
 #### 表单联动  
 表单联动用于表单B随表单A的改变而发生改变，具体内容位于[表单联动](http://10.10.102.154/06-Configuration-Develop-Guide/Advanced%20Settings/Form.html)，此处我们将根据项目类型不同选择不同开发平台。  
-项目类型：```develop:开发,maintain:运维```  
+项目类型：```development:开发,maintain:运维```  
 平台类型枚举：```windows:Windows,linux:Linux,unix:Unix,j2ee:J2EE,dotnet:.NET,ead:EAD,bpm:BPM```  
 视图属性参数：
 ```
 {"control":
 	{"events":
-		{"change:project_type":"swift|maintain:linux,windows;develop:dotnet,j2ee,ead,bpm"}
+		{"change:project_type":"swift|maintain:linux,windows;development:dotnet,j2ee,ead,bpm"}
 	}
 }
 ```  
