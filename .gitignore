@@ -1,3 +1,7 @@
 _book
 pdf/*
+<<<<<<< Updated upstream
 *.DS_Store
+=======
+.DS_Store
+>>>>>>> Stashed changes
