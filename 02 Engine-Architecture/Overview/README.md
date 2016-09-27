@@ -25,7 +25,7 @@ AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通�
 通过 JDBC 支持主流关系型数据库进行业务数据持久化存储和查询，为引擎提供数据源。支持 NoSQL、GridFS 进行静态文件存储。支持使用 API Service 的形式（扩展驱动）将数据持久化到第三方应用系统。
 
 #### 框架层
-基于 J2EE 开发平台，依赖于 Spring Cloud 框架，遵循 AOP 编程思想够建包含配置管理、 ORM、应用服务组件的引擎运行时框架。
+基于 J2EE 开发平台，依赖于 Spring Cloud 框架，遵循 AOP 编程思想构建包含配置管理、 ORM、应用服务组件的引擎运行时框架。
 
 #### 应用层
 基于框架层遵循 Restful 架构风格依次通过路由（Router）、服务中间件（Middleware）、参数组件（Param）、视图工厂组件（View Factory）、动作工厂组件（Action Factory）完成普通业务应用的请求响应。

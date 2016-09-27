@@ -28,7 +28,7 @@ Web Storage实际上由两部分组成：sessionStorage 与 localStorage。 sess
 
 #### MVVM
 
-Rainbow 基于 API 模型动态渲染用户交互视图，通过动态渲染的数据表单对视图模型进行更新，利用 Backbone 实现服务端和客户端数据同步交互。View 绑定到 ViewModel，然后执行一些命令在向它请求一个动作。而反过来，ViewModel 跟 Model 通讯，告诉它更新来响应UI。这样便使得为应用构建UI非常的容易。同时，当 UI 和功能越来越松耦合的时候，功能的可测试性就越来越强。
+Rainbow 基于 API 模型动态渲染用户交互视图，通过动态渲染的数据表单对视图模型进行更新，利用 Backbone 实现服务端和客户端数据同步交互。View 绑定到 ViewModel，然后执行一些命令再向它请求一个动作。而反过来，ViewModel 跟 Model 通讯，告诉它更新来响应UI。这样便使得为应用构建UI非常的容易。同时，当 UI 和功能越来越松耦合的时候，功能的可测试性就越来越强。
 
 ### 术语定义
 
