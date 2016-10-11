@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>安装 Mysql | EAD 安装部署手册</title>
+        <title>Tomcat多应用部署及优化 | EAD 安装部署手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../Environment/Install Mongodb.html" />
+    <link rel="next" href="../Install Ngnix/Install Ngnix.html" />
     
     
-    <link rel="prev" href="../Environment/Windows Server.html" />
+    <link rel="prev" href="../Suse Install/install_jre&amp;tomcat.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="1.1.1"
-        data-chapter-title="安装 Mysql"
-        data-filepath="Environment/Install Mysql.md"
+        data-level="8"
+        data-chapter-title="Tomcat多应用部署及优化"
+        data-filepath="Deployment Multiple Applications/Windows Deployment.md"
         data-basepath=".."
         data-revision="Tue Oct 11 2016 14:44:29 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -114,7 +114,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.1.1" data-path="Environment/Install Mysql.html">
+        <li class="chapter " data-level="1.1.1" data-path="Environment/Install Mysql.html">
             
                 
                     <a href="../Environment/Install Mysql.html">
@@ -454,7 +454,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8" data-path="Deployment Multiple Applications/Windows Deployment.html">
+        <li class="chapter active" data-level="8" data-path="Deployment Multiple Applications/Windows Deployment.html">
             
                 
                     <a href="../Deployment Multiple Applications/Windows Deployment.html">
@@ -517,46 +517,29 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h3 id="111-&#x5B89;&#x88C5;-mysql">1.1.1 &#x5B89;&#x88C5; Mysql</h3>
-<h4 id="1-&#x4E0B;&#x8F7D;-mysql">1. &#x4E0B;&#x8F7D; Mysql</h4>
-<p>Mysql &#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="http://dev.mysql.com/downloads/" target="_blank">http://dev.mysql.com/downloads/</a></p>
-<h4 id="2-windows-&#x4E0B;&#x5B89;&#x88C5;-mysql">2. Windows &#x4E0B;&#x5B89;&#x88C5; Mysql</h4>
-<p>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8FD0;&#x884C; Mysql &#x5B89;&#x88C5;&#x5305;&#xFF1B;</p>
-<p><img src="../images/mysql/1.png" alt="PNG">
-<img src="../images/mysql/2.png" alt="PNG"></p>
-<p>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x81EA;&#x5B9A;&#x4E49;&#x5B89;&#x88C5;&#xFF1B;</p>
-<p><img src="../images/mysql/3.png" alt="PNG"></p>
-<p>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#xFF1B;</p>
-<p><img src="../images/mysql/4.png" alt="PNG">
-<img src="../images/mysql/5.png" alt="PNG"></p>
-<p>&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x5B8C;&#x6210;&#x5B89;&#x88C5;&#xFF1B;</p>
-<p><img src="../images/mysql/6.png" alt="PNG">
-<img src="../images/mysql/7.png" alt="PNG">
-<img src="../images/mysql/8.png" alt="PNG"></p>
-<p>&#x7B2C;&#x4E94;&#x6B65;&#xFF1A;&#x542F;&#x52A8;&#x914D;&#x7F6E;&#x5411;&#x5BFC;&#xFF1B;</p>
-<ol>
-<li>&#x9009;&#x62E9;&#x8BE6;&#x7EC6;&#x5B89;&#x88C5;&#xFF1B;
-<img src="../images/mysql/9.png" alt="PNG">
-<img src="../images/mysql/10.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E;&#x5B89;&#x88C5;&#x4E3A; Server Machine
-<img src="../images/mysql/11.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E;&#x5B89;&#x88C5;&#x4E3A; Multifunctional Database
-<img src="../images/mysql/12.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E; Mysql Instance
-<img src="../images/mysql/13.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E; Concurrent Connections
-<img src="../images/mysql/14.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E;&#x7AEF;&#x53E3;
-<img src="../images/mysql/15.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;
-<img src="../images/mysql/16.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x540D;
-<img src="../images/mysql/17.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458; root &#x7528;&#x6237;&#x5BC6;&#x7801;
-<img src="../images/mysql/18.png" alt="PNG"></li>
-<li>&#x5B8C;&#x6210;&#x8BBE;&#x7F6E;&#xFF0C;&#x542F;&#x52A8;&#x670D;&#x52A1;
-<img src="../images/mysql/19.png" alt="PNG"></li>
-</ol>
+                        <h4 id="1-&#x90E8;&#x7F72;">1. &#x90E8;&#x7F72;</h4>
+<p>&#x5206;&#x522B;&#x5C06;&#x6253;&#x5305;&#x597D;&#x7684;&#x4E0D;&#x540C;&#x5E94;&#x7528;&#x7684; <strong>gbros-web.war</strong> &#x5305;&#x90E8;&#x7F72;&#x5230;&#x670D;&#x52A1;&#x5668; Tomcat&#x73AF;&#x5883;&#x4E2D;&#x3002;</p>
+<p>&#x62F7;&#x8D1D;&#x4F4D;&#x7F6E;&#x4E3A;&#xFF1A;<code>Tomcat &gt; webapps_pro &gt; war</code> &#x4E0B;&#x3002;
+          <code>Tomcat &gt; webapps_ead &gt; war</code> &#x4E0B;&#x3002;
+          <code>Tomcat &gt; webapps_demo &gt; war</code> &#x4E0B;&#x3002;
+          <code>Tomcat &gt; webapps_study &gt; war</code> &#x4E0B;&#x3002;
+          <code>Tomcat &gt; webapps_xyt &gt; war</code> &#x4E0B;&#x3002;</p>
+<h4 id="2-tomcat&#x76F8;&#x5173;&#x914D;&#x7F6E;">2. Tomcat&#x76F8;&#x5173;&#x914D;&#x7F6E;</h4>
+<p>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x5728;Tomcat/conf/server.xml&#x4E2D;&#x6DFB;&#x52A0;&#x76F8;&#x5173;&#x5E94;&#x7528;&#x914D;&#x7F6E;&#xFF1B;</p>
+<p><img src="../images/tomcat/11.png" alt="PNG"></p>
+<p>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A; &#x5728;Tomcat/bin/catalina.bat&#x4E2D;&#x6DFB;&#x52A0;tomcat&#x5185;&#x5B58;&#x914D;&#x7F6E;&#xFF1B;</p>
+<p><img src="../images/tomcat/12.png" alt="PNG"></p>
+<h4 id="3&#x591A;&#x5E94;&#x7528;&#x4E0B;tomcat&#x5171;&#x4EAB;jar&#x914D;&#x7F6E;&#xFF08;&#x6269;&#x5C55;&#x914D;&#x7F6E;&#xFF09;">3.&#x591A;&#x5E94;&#x7528;&#x4E0B;Tomcat&#x5171;&#x4EAB;JAR&#x914D;&#x7F6E;&#xFF08;&#x6269;&#x5C55;&#x914D;&#x7F6E;&#xFF09;</h4>
+<p>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x5728;Tomcat&#x4E0B;&#x5EFA;&#x7ACB;/shared/lib&#x76EE;&#x5F55;&#x3002;<br>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x5C06;&#x5404;&#x4E2A;&#x5E94;&#x7528;&#x4E0B;&#x4E2D;/ROOT/WEB-INF/lib&#x76F8;&#x540C;JAR&#x6587;&#x4EF6;&#x5220;&#x9664;&#xFF0C;&#x7EDF;&#x4E00;&#x653E;&#x5230;shared/lib&#x76EE;&#x5F55;&#x4E2D;&#x3002;<br>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x5728;Tomcat/catalina.prpperties&#x4E2D;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#xFF1A;
+<img src="../images/tomcat/13.png" alt="PNG"></p>
+<h4 id="4-windows-&#x4E0B;&#x542F;&#x52A8;-tomcat">4. Windows &#x4E0B;&#x542F;&#x52A8; Tomcat</h4>
+<p>&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;Windows &#x670D;&#x52A1;&#x65B9;&#x5F0F;&#x542F;&#x52A8;</p>
+<p>&#x5728; Windows &#x670D;&#x52A1;&#x4E2D;&#x542F;&#x52A8; Tomcat &#x670D;&#x52A1;&#xFF1B;</p>
+<p><img src="../images/tomcat/2.png" alt="PNG"></p>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;&#x547D;&#x4EE4;&#x884C;&#x65B9;&#x5F0F;&#x542F;&#x52A8;</p>
+<p>&#x5728; Windows &#x670D;&#x52A1;&#x4E2D;&#xFF0C;&#x542F;&#x52A8; Tomcat &#x6216;&#x8005;&#x5728; <code>Tomcat &gt; bin</code> &#x4E0B;&#xFF0C;&#x542F;&#x52A8; startup.bat&#x3002;</p>
+<p>&#x5F53;&#x770B;&#x5230;&#x4EE5;&#x4E0B;&#x754C;&#x9762;&#x65F6;&#xFF0C;&#x8BF4;&#x660E;&#x542F;&#x52A8;&#x6210;&#x529F;&#xFF1A;</p>
+<p><img src="../images/tomcat/4.png" alt="PNG"></p>
 
                     
                     </section>
@@ -567,10 +550,10 @@
         </div>
 
         
-        <a href="../Environment/Windows Server.html" class="navigation navigation-prev " aria-label="Previous page: Winows Server"><i class="fa fa-angle-left"></i></a>
+        <a href="../Suse Install/install_jre&amp;tomcat.html" class="navigation navigation-prev " aria-label="Previous page: Jre &amp; Tomcat安装"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../Environment/Install Mongodb.html" class="navigation navigation-next " aria-label="Next page: 安装 Mongodb"><i class="fa fa-angle-right"></i></a>
+        <a href="../Install Ngnix/Install Ngnix.html" class="navigation navigation-next " aria-label="Next page: 负载均衡扩展之Ngnix安装"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

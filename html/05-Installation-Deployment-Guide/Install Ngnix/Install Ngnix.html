@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>安装 Mysql | EAD 安装部署手册</title>
+        <title>负载均衡扩展之Ngnix安装 | EAD 安装部署手册</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,8 @@
         
     
     
-    <link rel="next" href="../Environment/Install Mongodb.html" />
     
-    
-    <link rel="prev" href="../Environment/Windows Server.html" />
+    <link rel="prev" href="../Deployment Multiple Applications/Windows Deployment.html" />
     
 
         
@@ -49,9 +47,9 @@
         
         
     <div class="book"
-        data-level="1.1.1"
-        data-chapter-title="安装 Mysql"
-        data-filepath="Environment/Install Mysql.md"
+        data-level="9"
+        data-chapter-title="负载均衡扩展之Ngnix安装"
+        data-filepath="Install Ngnix/Install Ngnix.md"
         data-basepath=".."
         data-revision="Tue Oct 11 2016 14:44:29 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -114,7 +112,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.1.1" data-path="Environment/Install Mysql.html">
+        <li class="chapter " data-level="1.1.1" data-path="Environment/Install Mysql.html">
             
                 
                     <a href="../Environment/Install Mysql.html">
@@ -469,7 +467,7 @@
             
         </li>
     
-        <li class="chapter " data-level="9" data-path="Install Ngnix/Install Ngnix.html">
+        <li class="chapter active" data-level="9" data-path="Install Ngnix/Install Ngnix.html">
             
                 
                     <a href="../Install Ngnix/Install Ngnix.html">
@@ -517,45 +515,48 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h3 id="111-&#x5B89;&#x88C5;-mysql">1.1.1 &#x5B89;&#x88C5; Mysql</h3>
-<h4 id="1-&#x4E0B;&#x8F7D;-mysql">1. &#x4E0B;&#x8F7D; Mysql</h4>
-<p>Mysql &#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="http://dev.mysql.com/downloads/" target="_blank">http://dev.mysql.com/downloads/</a></p>
-<h4 id="2-windows-&#x4E0B;&#x5B89;&#x88C5;-mysql">2. Windows &#x4E0B;&#x5B89;&#x88C5; Mysql</h4>
-<p>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8FD0;&#x884C; Mysql &#x5B89;&#x88C5;&#x5305;&#xFF1B;</p>
-<p><img src="../images/mysql/1.png" alt="PNG">
-<img src="../images/mysql/2.png" alt="PNG"></p>
-<p>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x9009;&#x62E9;&#x81EA;&#x5B9A;&#x4E49;&#x5B89;&#x88C5;&#xFF1B;</p>
-<p><img src="../images/mysql/3.png" alt="PNG"></p>
-<p>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8BBE;&#x7F6E;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#xFF1B;</p>
-<p><img src="../images/mysql/4.png" alt="PNG">
-<img src="../images/mysql/5.png" alt="PNG"></p>
-<p>&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x5B8C;&#x6210;&#x5B89;&#x88C5;&#xFF1B;</p>
-<p><img src="../images/mysql/6.png" alt="PNG">
-<img src="../images/mysql/7.png" alt="PNG">
-<img src="../images/mysql/8.png" alt="PNG"></p>
-<p>&#x7B2C;&#x4E94;&#x6B65;&#xFF1A;&#x542F;&#x52A8;&#x914D;&#x7F6E;&#x5411;&#x5BFC;&#xFF1B;</p>
+                        <h3 id="1ngnix&#x5B89;&#x88C5;">1.Ngnix&#x5B89;&#x88C5;</h3>
+<h4 id="11-&#x521B;&#x5EFA;ngnix&#x7528;&#x6237;">1.1 &#x521B;&#x5EFA;ngnix&#x7528;&#x6237;</h4>
 <ol>
-<li>&#x9009;&#x62E9;&#x8BE6;&#x7EC6;&#x5B89;&#x88C5;&#xFF1B;
-<img src="../images/mysql/9.png" alt="PNG">
-<img src="../images/mysql/10.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E;&#x5B89;&#x88C5;&#x4E3A; Server Machine
-<img src="../images/mysql/11.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E;&#x5B89;&#x88C5;&#x4E3A; Multifunctional Database
-<img src="../images/mysql/12.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E; Mysql Instance
-<img src="../images/mysql/13.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E; Concurrent Connections
-<img src="../images/mysql/14.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E;&#x7AEF;&#x53E3;
-<img src="../images/mysql/15.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;
-<img src="../images/mysql/16.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x540D;
-<img src="../images/mysql/17.png" alt="PNG"></li>
-<li>&#x8BBE;&#x7F6E;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458; root &#x7528;&#x6237;&#x5BC6;&#x7801;
-<img src="../images/mysql/18.png" alt="PNG"></li>
-<li>&#x5B8C;&#x6210;&#x8BBE;&#x7F6E;&#xFF0C;&#x542F;&#x52A8;&#x670D;&#x52A1;
-<img src="../images/mysql/19.png" alt="PNG"></li>
+<li>&#x901A;&#x8FC7;root&#x7528;&#x6237;&#x767B;&#x5F55;&#x4E24;&#x53F0;&#xFF0C;&#x6267;&#x884C;<br><code># useradd -d /data/ngnix -m ngnix</code>  </li>
+<li>&#x4FEE;&#x6539;&#x5BC6;&#x7801;<br><code># passwd ngnix</code><br><code>ngnix****</code>  </li>
+</ol>
+<h4 id="12-&#x4E0A;&#x4F20;ngnix&#x53CA;&#x4F9D;&#x8D56;&#x5B89;&#x88C5;&#x5305;">1.2 &#x4E0A;&#x4F20;Ngnix&#x53CA;&#x4F9D;&#x8D56;&#x5B89;&#x88C5;&#x5305;</h4>
+<ol>
+<li>&#x521B;&#x5EFA;Ngnix&#x5B89;&#x88C5;&#x76EE;&#x5F55;<br>&#x901A;&#x8FC7;ngnix&#x7528;&#x6237;&#x767B;&#x5F55;<br><code># cd /data/ngnix</code><br><code># mkdir install</code>  </li>
+<li>&#x901A;&#x8FC7;ngnix&#x7528;&#x6237;&#xFF0C;&#x5C06;ngnix&#x5B89;&#x88C5;&#x5305;nginx-1.9.9.tar.gz&#x53CA;&#x4F9D;&#x8D56;&#x5305;openssl-1.0.0o.tar.gz&#x3001;pcre-8.12.tar.gz&#x3001;zlib-1.2.8.tar.gz&#x4E0A;&#x4F20;&#x5230;install&#x76EE;&#x5F55;  </li>
+<li>&#x89E3;&#x538B;&#x6240;&#x6709;&#x5B89;&#x88C5;&#x5305;<br><code># cd /data/ngnix/install</code><br><code># tar -xzvf nginx-1.9.9.tar.gz</code><br><code># tar -xzvf openssl-1.0.0o.tar.gz</code><br><code># tar -xzvf pcre-8.12.tar.gz</code><br><code># tar -xzvf zlib-1.2.8.tar.gz</code>  </li>
+</ol>
+<h4 id="13-&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5305;">1.3 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5305;</h4>
+<ol>
+<li>&#x5B89;&#x88C5;zlib&#x4F9D;&#x8D56;&#x5305;<br><code># cd /data/ngnix/install</code><br><code># cd zlib-1.2.8/</code><br><code># ./configure</code><br><code># make &amp;&amp; make install</code>  </li>
+<li>&#x5B89;&#x88C5;pcre&#x4F9D;&#x8D56;&#x5305;<br><code># cd /data/ngnix/install</code><br><code># chmod -R 777 pcre-8.12</code><br><code># cd pcre-8.12</code><br><code># ./configure</code><br><code># make &amp;&amp; make install</code>  </li>
+<li>&#x8BBE;&#x7F6E;pcre lib&#x5305;<br><code># mkdir -p /data/ngnix/install/pcre-8.12/.libs</code><br><code># cp /usr/local/lib/libpcre.a /data/ngnix/install/pcre-8.12/libpcre.a</code><br><code># cp /usr/local/lib/libpcre.a /data/ngnix/install/pcre-8.12/libpcre.la</code><br><code># cp /usr/local/lib/libpcre.a /data/ngnix/install/pcre-8.12/.libs/libpcre.a</code><br><code># cp /usr/local/lib/libpcre.a /data/ngnix/install/pcre-8.12/.libs/libpcre.la</code>  </li>
+<li>&#x5B89;&#x88C5;openssl&#x4F9D;&#x8D56;&#x5305;<br><code># cd /data/ngnix/install</code><br><code># cd openssl-1.0.0o/</code><br><code># ./config</code><br><code># make &amp;&amp; make install</code>  </li>
+</ol>
+<h4 id="14-&#x5B89;&#x88C5;ngnix">1.4 &#x5B89;&#x88C5;Ngnix</h4>
+<p><code># cd /data/ngnix/install</code><br><code># cd nginx-1.9.9/</code><br><code># ./configure --user=nobody --group=nobody --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/data/ngnix/install/pcre-8.12 --with-openssl=/data/ngnix/install/openssl-1.0.0o</code><br><code># make &amp;&amp; make install</code>  </p>
+<h4 id="15-&#x914D;&#x7F6E;ngnix">1.5 &#x914D;&#x7F6E;Ngnix</h4>
+<p>&#x4FEE;&#x6539;Ngnix&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6; /usr/local/webserver/nginx/conf/nginx.conf&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;  </p>
+<p><code>#user  nobody;</code><br><code>worker_processes  4;</code>  </p>
+<p><code>#error_log  logs/error.log;</code><br><code>error_log  logs/error.log  notice;</code><br><code>#error_log  logs/error.log  info;</code>  </p>
+<p><code>pid        logs/nginx.pid;</code>  </p>
+<p><code>events {</code><br><code>worker_connections  10240;</code><br><code>}</code>   </p>
+<p><code>http</code><br><code>{</code><br><code>include       mime.types;</code><br><code>default_type  application/octet-stream;</code><br><code>fastcgi_intercept_errors on;</code><br><code>charset  utf-8;</code><br><code>server_names_hash_bucket_size 128;</code><br><code>client_header_buffer_size 4k;</code><br><code>large_client_header_buffers 4 32k;</code><br><code>client_max_body_size 300m;</code><br><code>fastcgi_buffers 8 128k;</code><br><code>sendfile on;</code><br><code>tcp_nopush     on;</code>   </p>
+<p><code>keepalive_timeout 60;</code>   </p>
+<p><code>tcp_nodelay on;</code><br><code>client_body_buffer_size  512k;</code>   </p>
+<p><code>proxy_connect_timeout    5;</code><br><code>proxy_read_timeout       60;</code><br><code>proxy_send_timeout       5;</code><br><code>proxy_buffer_size        16k;</code><br><code>proxy_buffers            4 64k;</code><br><code>proxy_busy_buffers_size 128k;</code><br><code>proxy_temp_file_write_size 128k;</code>   </p>
+<p><code>gzip on;</code><br><code>gzip_min_length  1k;</code><br><code>gzip_buffers     4 16k;</code><br><code>gzip_http_version 1.1;</code><br><code>gzip_comp_level 2;</code><br><code>gzip_types       text/plain application/x-javascript text/css application/xml;</code><br><code>gzip_vary on;</code>   </p>
+<p><code>### change nginx logs</code><br><code>log_format  main  &apos;$http_x_forwarded_for - $remote_user [$time_local] &quot;$request&quot; &apos;</code>
+<code>&apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</code><br><code>&apos;&quot;$http_user_agent&quot;  $request_time $remote_addr&apos;;</code>  </p>
+<p><code>upstream web_app {</code><br><code>server eas.whchem.com:8080;</code><br><code>}</code>   </p>
+<p><code>#### eas.whchem.com</code><br><code>server {</code><br><code>listen 8080;</code><br><code>server_name  eas.whchem.com;</code><br><code>index index.jsp index.html index.html;</code><br><code>#&#x53D1;&#x5E03;&#x76EE;&#x5F55;</code><br><code>root  /;</code><br><code>location /</code><br><code>{</code><br><code>proxy_next_upstream http_502 http_504 error timeout invalid_header;</code><br><code>proxy_set_header Host  $host:$server_port;</code><br><code>proxy_set_header X-Real-IP $remote_addr;</code><br><code>proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</code><br><code>proxy_pass http://web_app;</code><br><code>}</code><br><code>}</code><br><code>}</code>  </p>
+<h4 id="16-ngnix&#x5E38;&#x7528;&#x547D;&#x4EE4;">1.6 Ngnix&#x5E38;&#x7528;&#x547D;&#x4EE4;</h4>
+<ol>
+<li>&#x505C;&#x6B62;<br>&#x67E5;&#x8BE2;nginx&#x4E3B;&#x8FDB;&#x7A0B;&#x53F7;<br><code>ps -ef | grep nginx</code><br>&#x4ECE;&#x5BB9;&#x505C;&#x6B62;   <code>kill -QUIT &#x4E3B;&#x8FDB;&#x7A0B;&#x53F7;</code><br>&#x5FEB;&#x901F;&#x505C;&#x6B62;   <code>kill -TERM &#x4E3B;&#x8FDB;&#x7A0B;&#x53F7;</code><br>&#x5F3A;&#x5236;&#x505C;&#x6B62;   <code>kill -9 nginx</code>  </li>
+<li>&#x542F;&#x52A8;<br><code># cd  /usr/local/webserver/nginx/sbin/</code><br><code># ./nginx -c /usr/local/webserver/nginx/conf/nginx.conf</code>  </li>
+<li>&#x5224;&#x65AD;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x6B63;&#x786E;<br><code># cd  /usr/local/webserver/nginx/sbin/</code><br><code># nginx -t -c /usr/local/nginx/conf/nginx.conf</code><br>&#x6216;&#x8005;<br><code># ./nginx -t</code>  </li>
+<li>&#x91CD;&#x65B0;&#x52A0;&#x8F7D;<br><code># cd  /usr/local/webserver/nginx/sbin/</code><br><code># ./nginx -s reload</code></li>
 </ol>
 
                     
@@ -567,10 +568,8 @@
         </div>
 
         
-        <a href="../Environment/Windows Server.html" class="navigation navigation-prev " aria-label="Previous page: Winows Server"><i class="fa fa-angle-left"></i></a>
+        <a href="../Deployment Multiple Applications/Windows Deployment.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Tomcat多应用部署及优化"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../Environment/Install Mongodb.html" class="navigation navigation-next " aria-label="Next page: 安装 Mongodb"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
