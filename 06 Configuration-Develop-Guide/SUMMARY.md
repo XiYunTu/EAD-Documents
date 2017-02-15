@@ -39,7 +39,7 @@
   * [配置系统变量](Advanced Settings/Setting System Variable.md)
   * [配置模型属性字典](Advanced Settings/Setting Model Attribute's Wordbook.md)
   * [注册自定义驱动](Advanced Settings/Register Driver.md)
-  * [表单联动](Advanced Settings/Form.md)
+  * [表单控件](Advanced Settings/Form.md)
   * [视图模式](Advanced Settings/View Mode.md)
   * [邮件发送](Advanced Settings/Send Mail.md)
 * [综合案例：IT 项目工单管理工具](Case-PMO/README.md)

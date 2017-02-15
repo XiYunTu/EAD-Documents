@@ -60,20 +60,19 @@ EAD 交互由一些固定 API 格式进行路由，通过这些 API，执行不�
 | /{resPath} | POST | resPath: 资源路径 | 数据新增操作 |
 | /{resPath}/{actionKey} | POST | resPath: 资源路径;<br/> actionKey: 动作标识 | 其他特殊操作 |
 | /{resPath}/{id} | PUT | resPath: 资源路径;<br/>id: 数据主键； | 数据修改操作 |
-| /{resPath}/{id}/{actionKey} | PUT | resPath: 资源路径;<br/>id: 数据主键;<br/>actionKey: 动作标识 | 数据修改操作 |
+| /{resPath}/{actionKey}/{id} | PUT | resPath: 资源路径;<br/>id: 数据主键;<br/>actionKey: 动作标识 | 数据修改操作 |
 | /{resPath} | DELETE | resPath: 资源路径;<br/> | 批量数据删除操作 |
 | /{resPath}/{id} | DELETE | resPath: 资源路径;<br/>id: 数据主键; | 单条数据删除操作 |
 | /{resPath}/{id}/{attrName} | POST | resPath: 资源路径;<br/>attrName: 子视图名称 | 子视图数据新增操作 |
 | /{resPath}/{id}/{attrName}/{actionKey} | POST | resPath: 资源路径;<br/>attrName: 子视图名称<br/>actionKey: 动作标识 | 子视图其他特殊操作 |
 | /{resPath}/{id}/{attrName}/{id} | PUT | resPath: 资源路径;<br/>id: 数据主键;<br/>attrName: 子视图名称;<br/>id: 子视图数据主键; | 子视图数据修改操作 |
-| /{resPath}/{id}/{attrName}/{id}/{actionKey} | PUT | resPath: 资源路径;<br/>id: 数据主键;<br/> attrName: 子视图名称;<br/>id: 子视图数据主键;<br/>actionKey: 动作标识 | 子视图数据修改操作 |
+| /{resPath}/{id}/{attrName}/{actionKey}/{id} | PUT | resPath: 资源路径;<br/>id: 数据主键;<br/> attrName: 子视图名称;<br/>id: 子视图数据主键;<br/>actionKey: 动作标识 | 子视图数据修改操作 |
 | /{resPath}/{id}/{attrName} | DELETE | resPath: 资源路径;<br/>id: 数据主键;<br/>attrName: 子视图名称; | 子视图批量数据删除操作 |
 | /{resPath}/{id}/{attrName}/{id} | DELETE | resPath: 资源路径;<br/>id: 数据主键;<br/>attrName: 子视图名称;<br/>id: 子视图数据主键; | 子视图单条数据删除操作 |
 
 
 > 注意：<br/>
-> 1、最后一条路由：{attrName}/{id} 可以进行嵌套，例如：{attrName}/{id}/{attrName}/{id}/{attrName}/{id}...<br/>
-> 2、{actionKey} 不出现或者只出现到路由末尾；
+> 最后一条路由：{attrName}/{id} 可以进行嵌套，例如：{attrName}/{id}/{attrName}/{id}/{attrName}/{id}...<br/>
 
 
 
