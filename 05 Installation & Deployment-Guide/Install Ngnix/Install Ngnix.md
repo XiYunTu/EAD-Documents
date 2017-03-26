@@ -154,24 +154,24 @@
 `# ./nginx -s reload`
 
 #### 1.7 Ngnix实际使用补充（大庆环境使用）
-1. 切换管理员登录，部署安装包
-`su root`
-本次使用安装包版本
-nginx-1.10.3.tar.gz，openssl-1.1.0e.tar.gz，pcre-8.40.tar.gz，zlib-1.2.11.tar.gz
-2. 修改Ngnix配置文件内容如下
-因为大庆需要2个应用进行负载均衡，所以需要配置两个upstream(两个指向地址)与两个server(两个应用)
-这里我们配置为每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题
+1. 切换管理员登录，部署安装包  
+`su root`  
+本次使用安装包版本  
+nginx-1.10.3.tar.gz，openssl-1.1.0e.tar.gz，pcre-8.40.tar.gz，zlib-1.2.11.tar.gz  
+2. 修改Ngnix配置文件内容如下  
+因为大庆需要2个应用进行负载均衡，所以需要配置两个upstream(两个指向地址)与两个server(两个应用)  
+这里我们配置为每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题  
 `upstream web_app {`   
-` ip_hash;`
+` ip_hash;`  
 ` server 10.65.162.55:8080;`  
 ` server 10.65.162.110:8080;`  
 `}`   
 `upstream web_ead {`  
-` ip_hash;`
+` ip_hash;`  
 ` server 10.65.162.55:80;`  
 ` server 10.65.162.110:80;` 
 `}`  
-这里配置server,不需要配置发布目录和默认主页面
+这里配置server,不需要配置发布目录和默认主页面  
 `server {`   
 `    listen 8080;`   
 `    server_name  127.0.0.1;`   
@@ -202,41 +202,41 @@ nginx-1.10.3.tar.gz，openssl-1.1.0e.tar.gz，pcre-8.40.tar.gz，zlib-1.2.11.tar
 `    proxy_pass http://web_ead;`  
 `    }`  
 `  }`
-3. 查看网络端口
-输入命令，查看80端口与8080端口是否打开
-`# netstat -ntlp `
-4. 关闭centos防火墙
-由于是centos服务器，所以需要关闭centos默认firewall防火墙
-停止firewall
-`# systemctl stop firewalld.service `
-禁止firewall开机启动
-`# systemctl disable firewalld.service `
-查看默认防火墙状态（关闭后显示notrunning，开启后显示running）
-`# firewall-cmd --state `
-5. 根据情况是否开启iptables防火墙
-编辑防火墙配置文件
-`# vi/etc/sysconfig/iptables `
-`# sampleconfiguration for iptables service `
-`# you can edit thismanually or use system-config-firewall `
-`# please do not askus to add additional ports/services to this default `
-`configuration`
-`*filter`
-`:INPUT ACCEPT [0:0]`
-`:FORWARD ACCEPT[0:0]`
-`:OUTPUT ACCEPT[0:0]`
-`-A INPUT -m state--state RELATED,ESTABLISHED -j ACCEPT`
-`-A INPUT -p icmp -jACCEPT`
-`-A INPUT -i lo -jACCEPT`
-`-A INPUT -p tcp -mstate --state NEW -m tcp --dport 22 -j ACCEPT`
-`-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -jACCEPT`
-`-A INPUT -p tcp -m state --state NEW -m tcp --dport 8080-j ACCEPT`
-`-A INPUT -j REJECT--reject-with icmp-host-prohibited`
-`-A FORWARD -jREJECT --reject-with icmp-host-prohibited`
-`COMMIT`
-最后重启防火墙使配置生效
-`systemctlrestart iptables.service `
-设置防火墙开机启动
-`systemctlenable iptables.service `
+3. 查看网络端口  
+输入命令，查看80端口与8080端口是否打开  
+`# netstat -ntlp `  
+4. 关闭centos防火墙  
+由于是centos服务器，所以需要关闭centos默认firewall防火墙  
+停止firewall  
+`# systemctl stop firewalld.service `  
+禁止firewall开机启动  
+`# systemctl disable firewalld.service `  
+查看默认防火墙状态（关闭后显示notrunning，开启后显示running）  
+`# firewall-cmd --state `  
+5. 根据情况是否开启iptables防火墙  
+编辑防火墙配置文件  
+`# vi/etc/sysconfig/iptables `  
+`# sampleconfiguration for iptables service `  
+`# you can edit thismanually or use system-config-firewall `  
+`# please do not askus to add additional ports/services to this default `  
+`configuration`  
+`*filter`  
+`:INPUT ACCEPT [0:0]`  
+`:FORWARD ACCEPT[0:0]`  
+`:OUTPUT ACCEPT[0:0]`  
+`-A INPUT -m state--state RELATED,ESTABLISHED -j ACCEPT`  
+`-A INPUT -p icmp -jACCEPT`  
+`-A INPUT -i lo -jACCEPT`  
+`-A INPUT -p tcp -mstate --state NEW -m tcp --dport 22 -j ACCEPT`  
+`-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -jACCEPT`  
+`-A INPUT -p tcp -m state --state NEW -m tcp --dport 8080-j ACCEPT`  
+`-A INPUT -j REJECT--reject-with icmp-host-prohibited`  
+`-A FORWARD -jREJECT --reject-with icmp-host-prohibited`  
+`COMMIT`  
+最后重启防火墙使配置生效  
+`systemctlrestart iptables.service `  
+设置防火墙开机启动  
+`systemctlenable iptables.service `  
 
 
 
